@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bokor&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lilita+One&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Moul&family=Moulpali&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bokor&family=Lilita+One&family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Moul&family=Moulpali&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            
+            font-family: "Moulpali", serif;
+            font-weight: 500;
+            font-style: normal;
+            
+        }
+        .custom-card {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-out;
+        }
+        .custom-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease-out;
+        }
+        .provinces:hover {
+            transform: scale(1.15);
+        }
+        .vendor-link:hover {
+            color: #cc4795;
+            font-weight: 500;
+            text-decoration: double;
+        }
+        .vendor-link {
+            text-decoration: none !important;;
+            color: #333;
+
+        }
+        .khmer{
+            font-family: "Moul", serif;
+            font-size: x-small;
+        }
+        .cuisine-link {
+            color: #333;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+
+        }
+        .cuisine-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -1px;
+            left: 0;
+            background-color: #000000;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: left;
+        }
+        .cuisine-link:hover::after {
+            transform: scaleX(1);
+        }
+        .location-link {
+            color: #333;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            width: fit-content;
+            font-family: "Lobster", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .location-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -1px;
+            left: 0;
+            background-color: #333;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: left;
+        }
+        .location-link:hover::after {
+            transform: scaleX(1);
+        }
+        /* Custom Styles */
+        .download-section {
+            background-color: #E4006D; /* Pink Background */
+            color: white;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-section h2 {
+            font-weight: bold;
+            color: black;
+        }
+
+        .download-section .content {
+            max-width: 500px;
+        }
+
+        .download-section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .app-buttons img {
+            width: 150px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .qr-code {
+            width: 100px;
+            margin-right: 15px;
+        }
+
+        @media (max-width: 992px) {
+            .download-section {
+                text-align: center;
+            }
+
+            .qr-code {
+                margin-bottom: 15px;
+            }
+
+            .app-buttons img {
+                width: 130px;
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+        /* Custom styles for the page */
+        .hero-section {
+            background-image: url('https://images.deliveryhero.io/image/foodpanda/home-vendor-kh.jpg?width=1264&height=808.96'); /* Replace with your image URL */
+            background-size: cover;
+            height: 40vh;
+            background-position: center;
+            padding: 100px 0; /* Adjust padding as needed */
+            margin-bottom: 50px;
+        }
+        .btn-primary {
+            background-color: #cc46ba; /* Foodpanda's primary color */
+        
+        }

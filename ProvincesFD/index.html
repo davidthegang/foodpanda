@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phnom Penh</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../src/Logo Title.png" type="image/x-icon">
+    <style>
+        .navbar-brand img {
+            height: 40px;
+        }
+        
+        .panda-mascot {
+            width: 150px;
+            height: auto;
+        }
+        .restaurant-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .restaurant-card:hover {
+            transform: scale(1.03);
+        }
+        .welcome-gift {
+            background-color: #e91e63;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .restaurant-image {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-1">
+        <div class="container">
+            <!-- Left side - Menu and Logo -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <i class='bx bx-user'></i>
+            </button>
+            
+            <a class="navbar-brand" href="../index.html">
+                <img src="../src/Logo Panda.png" class="img-fluid" alt="Foodpanda Logo">
+            </a>
+
+            <!-- Center - Location Selector -->
+            <div class="d-none d-lg-block">
+                <a href="#" class="text-decoration-none text-dark d-flex align-items-center gap-2 fw-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                    Phnom Penh
+                </a>
+            </div>
+            
+
+            <!-- Right side - User and Cart -->
+            <div class="d-flex align-items-center">
+                <button class="btn btn-outline-dark btn-sm rounded-3 d-none d-lg-block px-3 fw-bold text-center" data-bs-toggle="modal" data-bs-target="#loginModal" style="margin-right: 15px;">Log in</button>
+                <button class="btn btn- text-white btn-sm rounded-3 d-none d-lg-block fw-bold px-3 text-center" data-bs-toggle="modal" data-bs-target="#loginModal" style="margin-right: 15px; background-color:  rgb(226,27,112);"> Sign up</button>
+                <div class="container-login m-1" >
+                    <div class="dropdown rounded-4 d-flex align-items-center d-none d-lg-block mx-2">
+                        <button class="btn btn-secondary btn-sm fw-bold border-0 text dropdown-toggle fw-medium " style="background-color: white; color: black;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../src/world.png" class="mb-1" width="19px" alt="" />
+                          EN
+                        </button>
+                        <ul class="dropdown-menu border-0 shadow-lg" style="background-color:  rgb(218, 62, 129);">
+                          <li><a class="dropdown-item text-white" href="#"><button class="border-0 btn-sm w-100 rounded-3 fw-bold bg-white">English</button></a></li>
+                          <li><a class="dropdown-item text-white" href="#"><button class="border-0 btn-sm w-100 rounded-3 fw-bold bg-white">Khmer</button></a></li>
+                        </ul>
+                      </div>
+                </div>
+                    
+                <a href="#" class="ms-3 text-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </a>
+                
+            </div>
+
+
+            <!-- Mobile Menu -->
+            <div class="modal fade" id="loginModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-sm modal-md modal-lg">
+                    <div class="modal-content border-0 shadow-sm mx-auto" style="max-width: 400px;">
+                        <!-- Header -->
+                        <div class="p-4 border-bottom-0">
+                            <h6 class="mb-2">Welcome to <img src="../src/Logo Panda.png" class="img-fluid" width="140px" alt=""></h6>
+                            <p class="lead fs-6 mb-0 mt-3">Sign up or log in to continue</p>
+                            <button type="button" class="btn-close btn-md position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+                        </div>
+            
+                        <!-- Social Login Buttons -->
+                        <div class="px-4">
+                            <div class="d-grid gap-3">
+                                <button class="btn btn-primary border-0 btn-sm shadow-sm d-flex align-items-center justify-content-center">
+                                    <img src="../src/facebook.png" width="30" alt="Facebook" class="me-1">
+                                    <a href="https://www.facebook.com/" class="text-decoration-none text-white" target="_blank">
+                                        <span class="fw-bold">Continue With Facebook</span>
+                                    </a>
+                                </button>
+            
+                                <button class="btn btn-light btn-sm border-0 shadow-sm d-flex align-items-center justify-content-center">
+                                    <img src="../src/google1.png" width="30" alt="Google" class="me-1">
+                                    <a href="https://mail.google.com/mail/u/0/" class="text-decoration-none text-dark" target="_blank">
+                                        <span class="fw-bold">Continue With Google</span>
+                                    </a>
+                                </button>
+            
+                                <button class="btn btn-dark btn-sm d-flex align-items-center justify-content-center">
+                                    <img src="../src/apple.png" width="30" alt="Apple" class="me-1">
+                                    <a href="https://www.apple.com/" class="text-decoration-none text-white" target="_blank">
+                                        <span class="fw-bold">Continue With Apple</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+            
+                        <!-- Divider -->
+                        <div class="text-center my-3">
+                            <p class="lead mb-0">or</p>
+                        </div>
+            
+                        <!-- Login/Signup Buttons -->
+                        <div class="px-4 pb-4">
+                            <div class="d-grid gap-3">
+                                <button class="btn py-2 fs-6 btn-md fw-medium rounded-3" 
+                                        style="background-color: #ff2b85; color: white;" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#loginModal">
+                                    Log in
+                                </button>
+            
+                                <button class="btn btn-outline-dark py-2  btn-md fs-6 fw-medium rounded-3" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#signupModal">
+                                    SignUp
+                                </button>
+                            </div>
+            
+                            <p class="mt-3 mb-0 small">
+                                By using up, you agree to our 
+                                <span class="fw-medium" style="color: #ff2b85;">Terms and conditions</span> and 
+                                <span class="fw-medium" style="color: #ff2b85;">Privacy Policy.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <header class="bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8  mb-4 mb-lg-0">
+                    <h1 class="d-none d-lg-block" style="font-size: 50px; font-weight: bolder; color: #ff2b85;">Welcome To foodpanda</h1>
+                    <p class="lead mb-0 d-none d-lg-block" style="color: #ff2b85;">foodpanda Cambodia here with you 25/7 to make you enjoy the food</p>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <img src="../src/foodpanda main.png" class="img-fluid" alt="Foodpanda Mascot" class="panda-mascot">
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="container py-4">
+        <a href="../index.html" class="location-link fw-medium">HomePage </a> <i class="bi bi-arrow-right-short"></i><span class="fw-medium"> Phnom Penh</span>
+        <h4 class="mb-4 mt-4 fs-5">All Restaurants</h4>
+        <div class="row g-4">
+            <!-- Restaurant Card -->
+            <div class="col-md-4">
+                <div class="card restaurant-card position-relative border-0 shadow bg-light">
+                    <div class="welcome-gift">Welcome gift: free delivery</div>
+                    <img src="../Menu food/food-3.jpg" class="card-img-top restaurant-image" alt="Restaurant Image">
+                    <div class="card-body bg-light m-2">
+                        <h6 class="card-title ">Chiado Spicy Noodle 09 Level & Pizza</h6>
+                        <small class="card-text text-muted">Rice With Meat</small>
+                        <button class="btn btn-outline-dark btn-sm  shadow-sm text-success fw-medium bg-white border-0 position-absolute end-0 mx-3">Select to<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card position-relative border-0 shadow bg-light">
+                    <div class="welcome-gift">Welcome gift: free delivery</div>
+                    <img src="../Menu food/food-4.jpg" class="card-img-top restaurant-image" alt="Restaurant Image">
+                    <div class="card-body bg-light m-2">
+                        <h6 class="card-title ">Chiado Spicy Noodle 09 Level & Pizza</h6>
+                        <small class="card-text text-muted">Rice With Meat</small>
+                        <button class="btn btn-outline-dark btn-sm  shadow-sm text-success fw-medium bg-white border-0 position-absolute end-0 mx-3">Select to<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card position-relative border-0 shadow bg-light">
+                    <div class="welcome-gift">Welcome gift: free delivery</div>
+                    <img src="../Menu food/food-5.jpg" class="card-img-top restaurant-image" alt="Restaurant Image">
+                    <div class="card-body bg-light m-2">
+                        <h6 class="card-title ">Chiado Spicy Noodle 09 Level & Pizza</h6>
+                        <small class="card-text text-muted">Rice With Meat</small>
+                        <button class="btn btn-outline-dark btn-sm  shadow-sm text-success fw-medium bg-white border-0 position-absolute end-0 mx-3">Select to<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card position-relative border-0 shadow bg-light">
+                    <div class="welcome-gift">Welcome gift: free delivery</div>
+                    <img src="../Menu food/food-6.jpg" class="card-img-top restaurant-image" alt="Restaurant Image">
+                    <div class="card-body bg-light m-2">
+                        <h6 class="card-title ">Chiado Spicy Noodle 09 Level & Pizza</h6>
+                        <small class="card-text text-muted">Hambuger</small>
+                        <button class="btn btn-outline-dark btn-sm  shadow-sm text-success fw-medium bg-white border-0 position-absolute end-0 mx-3">Select to<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card position-relative border-0 shadow bg-light">
+                    <div class="welcome-gift">Welcome gift: free delivery</div>
+                    <img src="../Menu food/food-7.jpg" class="card-img-top restaurant-image" alt="Restaurant Image">
+                    <div class="card-body bg-light m-2">
+                        <h6 class="card-title ">Chiado Spicy Noodle 09 Level & Pizza</h6>
+                        <small class="card-text text-muted">Rice With Meat</small>
+                        <button class="btn btn-outline-dark btn-sm  shadow-sm text-success fw-medium bg-white border-0 position-absolute end-0 mx-3">Select to<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card position-relative border-0 shadow bg-light">
+                    <div class="welcome-gift">Welcome gift: free delivery</div>
+                    <img src="../Menu food/food-2.jpg" class="card-img-top restaurant-image" alt="Restaurant Image">
+                    <div class="card-body bg-light m-2">
+                        <h6 class="card-title ">Chiado Spicy Noodle 09 Level & Pizza</h6>
+                        <small class="card-text text-muted">Rice With Meat</small>
+                        <button class="btn btn-outline-dark btn-sm  shadow-sm text-success fw-medium bg-white border-0 position-absolute end-0 mx-3">Select to<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card restaurant-card position-relative border-0 shadow bg-light">
+                    <div class="welcome-gift">Welcome gift: free delivery</div>
+                    <img src="../Menu food/food-3.jpg" class="card-img-top restaurant-image" alt="Restaurant Image">
+                    <div class="card-body bg-light m-2">
+                        <h6 class="card-title ">Chiado Spicy Noodle 09 Level & Pizza</h6>
+                        <small class="card-text text-muted">Rice With Meat</small>
+                        <button class="btn btn-outline-dark btn-sm  shadow-sm text-success fw-medium bg-white border-0 position-absolute end-0 mx-3">Select to<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card position-relative border-0 shadow bg-light">
+                    <div class="welcome-gift">Welcome gift: free delivery</div>
+                    <img src="../Menu food/food-4.jpg" class="card-img-top restaurant-image" alt="Restaurant Image">
+                    <div class="card-body bg-light m-2">
+                        <h6 class="card-title ">Chiado Spicy Noodle 09 Level & Pizza</h6>
+                        <small class="card-text text-muted">Rice With Meat</small>
+                        <button class="btn btn-outline-dark btn-sm  shadow-sm text-success fw-medium bg-white border-0 position-absolute end-0 mx-3">Select to<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card position-relative border-0 shadow bg-light">
+                    <div class="welcome-gift">Welcome gift: free delivery</div>
+                    <img src="../Menu food/food-5.jpg" class="card-img-top restaurant-image" alt="Restaurant Image">
+                    <div class="card-body bg-light m-2">
+                        <h6 class="card-title ">Chiado Spicy Noodle 09 Level & Pizza</h6>
+                        <small class="card-text text-muted">Rice With Meat</small>
+                        <button class="btn btn-outline-dark btn-sm  shadow-sm text-success fw-medium bg-white border-0 position-absolute end-0 mx-3">Select to<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card position-relative border-0 shadow bg-light">
+                    <div class="welcome-gift">Welcome gift: free delivery</div>
+                    <img src="../Menu food/food-6.jpg" class="card-img-top restaurant-image" alt="Restaurant Image">
+                    <div class="card-body bg-light m-2">
+                        <h6 class="card-title ">Chiado Spicy Noodle 09 Level & Pizza</h6>
+                        <small class="card-text text-muted">Rice With Meat</small>
+                        <button class="btn btn-outline-dark btn-sm  shadow-sm text-success fw-medium bg-white border-0 position-absolute end-0 mx-3">Select to<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card position-relative border-0 shadow bg-light">
+                    <div class="welcome-gift">Welcome gift: free delivery</div>
+                    <img src="../Menu food/food-7.jpg" class="card-img-top restaurant-image" alt="Restaurant Image">
+                    <div class="card-body bg-light m-2">
+                        <h6 class="card-title ">Chiado Spicy Noodle 09 Level & Pizza</h6>
+                        <small class="card-text text-muted">Rice With Meat</small>
+                        <button class="btn btn-outline-dark btn-sm  shadow-sm text-success fw-medium bg-white border-0 position-absolute end-0 mx-3">Select to<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card restaurant-card position-relative border-0 shadow bg-light">
+                    <div class="welcome-gift">Welcome gift: free delivery</div>
+                    <img src="../Menu food/food-2.jpg" class="card-img-top restaurant-image" alt="Restaurant Image">
+                    <div class="card-body bg-light m-2">
+                        <h6 class="card-title ">Chiado Spicy Noodle 09 Level & Pizza</h6>
+                        <small class="card-text text-muted">Rice With Meat</small>
+                        <button class="btn btn-outline-dark btn-sm  shadow-sm text-success fw-medium bg-white border-0 position-absolute end-0 mx-3">Select to<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></button>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            <!-- Duplicate the card for other restaurants -->
+            
+        </div>
+    </div>
+
+
+    <!-- footer-start -->
+    <div class="container py-4 ">
+        <h4 class="mb-4 text-center">Popular cuisines available for delivery in Phnom Penh so far</h4>
+        <div class="row">
+            <div class="col-6 col-md-3 mb-4">
+                <h6 class="category-title text-center fw-bold">American</h6>
+                <div class="d-flex flex-column gap-2 d-flex align-items-center">
+                    <a href="#" class="cuisine-link">Cakes</a>
+                    <a href="#" class="cuisine-link">Fast Food</a>
+                    <a href="#" class="cuisine-link">German</a>
+                    <a href="#" class="cuisine-link">Indian</a>
+                    <a href="#" class="cuisine-link">Korean</a>
+                    <a href="#" class="cuisine-link">Mediterranean</a>
+                    <a href="#" class="cuisine-link">Sandwich</a>
+                    <a href="#" class="cuisine-link">Spanish</a>
+                    <a href="#" class="cuisine-link">Vegetarian</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <h6 class="category-title text-center fw-bold">Asian</h6>
+                <div class="d-flex flex-column gap-2 d-flex align-items-center">
+                    <a href="#" class="cuisine-link">Chinese</a>
+                    <a href="#" class="cuisine-link">Filipino</a>
+                    <a href="#" class="cuisine-link">Greek</a>
+                    <a href="#" class="cuisine-link">Indonesian</a>
+                    <a href="#" class="cuisine-link">Latino</a>
+                    <a href="#" class="cuisine-link">Mexican</a>
+                    <a href="#" class="cuisine-link">Seafood</a>
+                    <a href="#" class="cuisine-link">Sushi</a>
+                    <a href="#" class="cuisine-link">Vietnamese</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4 ">
+                <h6 class="category-title text-center fw-bold">Beverages</h6>
+                <div class="d-flex flex-column gap-2 d-flex align-items-center">
+                    <a href="#" class="cuisine-link">Desserts</a>
+                    <a href="#" class="cuisine-link">French</a>
+                    <a href="#" class="cuisine-link">Halal</a>
+                    <a href="#" class="cuisine-link">Italian</a>
+                    <a href="#" class="cuisine-link">Lebanese</a>
+                    <a href="#" class="cuisine-link">Middle Eastern</a>
+                    <a href="#" class="cuisine-link">Singaporean</a>
+                    <a href="#" class="cuisine-link">Thai</a>
+                    <a href="#" class="cuisine-link">Western</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <h6 class="category-title text-center fw-bold">Burger</h6>
+                <div class="d-flex flex-column gap-2  d-flex align-items-center">
+                    <a href="#" class="cuisine-link">European</a>
+                    <a href="#" class="cuisine-link">Fusion</a>
+                    <a href="#" class="cuisine-link">Healthy Food</a>
+                    <a href="#" class="cuisine-link">Japanese</a>
+                    <a href="#" class="cuisine-link">Malaysian</a>
+                    <a href="#" class="cuisine-link">Pizza</a>
+                    <a href="#" class="cuisine-link">South East Asian</a>
+                    <a href="#" class="cuisine-link">Turkish</a>
+                    <a href="#" class="cuisine-link">Bubble tea</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <hr >
+    </div>
+
+    <div class="container py-4 text-center">
+        <h4 class="mb-4">foodpanda Cambodia available in these cities</h4>
+        
+        <!-- Cities -->
+        <div class="row mb-4 text-center fw-bold d-flex justify-content-center align-items-center">
+            <div class="col-6 col-sm-3 mb-2">
+                <a href="#" class="location-link">Phnom Penh</a>
+            </div>
+            <div class="col-6 col-sm-3 mb-2">
+                <a href="#" class="location-link">Siem Reap</a>
+            </div>
+            <div class="col-6 col-sm-3 mb-2">
+                <a href="#" class="location-link">Battambang</a>
+            </div>
+            <div class="col-6 col-sm-3 mb-2">
+                <a href="#" class="location-link">Ta Khmau</a>
+            </div>
+            <div class="col-6 col-sm-3 mb-2">
+                <a href="#" class="location-link">Kampong Cham</a>
+            </div>
+            <div class="col-6 col-sm-3 mb-2">
+                <a href="#" class="location-link">Kampot</a>
+            </div>
+        </div>
+    
+        <hr>
+        <!-- Countries -->
+        <div class="d-flex flex-wrap gap-2 align-items-center justify-content-center">
+            <a href="#" class="location-link text-center">Myanmar</a>
+            <span class="separator">|</span>
+            <a href="#" class="location-link">Laos</a>
+            <span class="separator">|</span>
+            <a href="#" class="location-link">Thailand</a>
+            <span class="separator">|</span>
+            <a href="#" class="location-link">Singapore</a>
+            <span class="separator">|</span>
+            <a href="#" class="location-link">Malaysia</a>
+            <span class="separator">|</span>
+            <a href="#" class="location-link">Philippines</a>
+            <span class="separator">|</span>
+            <a href="#" class="location-link">Taiwan</a>
+            <span class="separator">|</span>
+            <a href="#" class="location-link">Hong Kong</a>
+            <span class="separator">|</span>
+            <a href="#" class="location-link">Pakistan</a>
+            <span class="separator">|</span>
+            <a href="#" class="location-link">Bangladesh</a>
+        </div>
+        <hr>
+    </div>
+    
+    
+    
+        <div class="container">
+            <div class="row flex-column flex-md-row">
+                <!-- Logos Section -->
+                <div class="col-md-8 d-flex justify-content-center justify-content-md-start mb-4 mb-md-0">
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- Foodpanda Logo -->
+                        <img src="../src/Logo Panda.png" style=" color:#666;" class="img-fluid" width="120px" alt="Foodpanda" class="footer-logo">
+                        
+                        <!-- Divider -->
+                        <div class="divider d-none d-sm-block" style="width: 1px; height: 40px; background-color: #babdc0;"></div>
+                        
+                        <!-- Delivery Hero Logo -->
+                        <img src="../src/delivery-hero.png" style=" color:#666;" class="img-fluid" width="80px" alt="Delivery Hero" class="footer-logo">
+                    </div>
+                </div>
+                <!-- Social Media Icons -->
+                <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- Instagram Icon -->
+                        <a href="#" class="text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" style="width: 24px; height:24px; color:#e21b70"  viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- Facebook Icon -->
+                        <a href="#" class="text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" style="width: 24px; height:24px; color:#e21b70" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                            </svg>
+                        </a>
+    
+                        <!-- Telegram Icon -->
+                        <a href="#" class="text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" style="width: 24px; height:24px; color:#e21b70" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                            </svg>
+                        </a>
+    
+                        <!-- TikTok Icon -->
+                        <a href="#" class="text-decoration-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" style="width: 24px; height:24px; color:#e21b70" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    <footer class="bg-light text-center py-2 mt-4">
+        <small>&copy; Lorndavit12@gamil.com</small><br>
+    </footer>
+    <!-- footer-end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

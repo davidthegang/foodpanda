@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>foodpanda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="src/Logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- place navbar here -->
+    <nav class="navbar navbar-expand-sm navbar-light border-bottom shadow fixed-top"  style="background-color: #ffffff; scroll-behavior: smooth;">
+        <div class="container">
+            <a href="index.html"  class="navbar-brand"><img
+                    src="src/Logo Panda.png" class="img-fluid" width="130px"></a>
+
+            <button class="navbar-toggler btn-sm" style="background-color: #ec4b8e; outline: #ff2b85;" data-bs-toggle="offcanvas" data-bs-target="#nav">
+                <i class="bi bi-houses"></i>
+            </button>
+            <div class="offcanvas offcanvas-end b-danger" id="nav">
+                <div class="offcanvas-header">
+                    <img src="src/Logo Panda.png" width="170px" alt="">
+                    <button class="btn-close btn-sm rounded-5" style="background-color: rgb(202, 29, 136);" data-bs-dismiss="offcanvas"></button>
+                    
+                </div>
+                
+                <div class="offcanvas-body">
+                    
+                    <ul class="navbar-nav gap-2 justify-content-start flex-grow-1 border-bottom-1">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link fw-bold text-dark d-lg-none d-md-none" id="menu"><button class="btn btn-outline-none btn-md border-0 w-100" style="background-color: rgb(226,27,112) ; color: white; font-weight: 500;">Get-Started <i class="bi bi-emoji-laughing"></i></button></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link fw-bold text-dark d-lg-none d-md-none"><button class="btn btn-outline-none btn-md border-0 w-100"style="background-color: rgb(226,27,112) ; color: white; font-weight: 500;" >Menu <i class="bi bi-menu-up"></i></button></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link fw-bold text-dark d-lg-none d-md-none mb-4"> <button class="btn btn-outline-dark w-100 btn-md border-0" style="background-color: rgb(226,27,112) ; color: white; font-weight: 500;">Location <i class="bi bi-geo-alt"></i></button></a>
+                        </li>
+                       <hr>
+                    </ul>
+                    
+
+
+                    <div class="container-right   align-items-center d-flex" >                              
+                        <button class="btn btn-outline-dark btn-sm rounded-3 px-3 fw-bold text-center" data-bs-toggle="modal" data-bs-target="#loginModal" style="margin-right: 15px;">Log in</button>
+                        <button class="btn btn- text-white btn-sm rounded-3 fw-bold px-3 text-center" data-bs-toggle="modal" data-bs-target="#loginModal" style="margin-right: 15px; background-color:  rgb(226,27,112);"> Sign up</button>
+                        
+                        <div class="container-login m-1" >
+                            <div class="dropdown rounded-4 d-flex align-items-center d-none d-lg-block mx-2">
+                                <button class="btn btn-secondary btn-sm fw-bold border-0 text dropdown-toggle fw-medium " style="background-color: white; color: black;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="../src/world.png" class="mb-1" width="19px" alt="" />
+                                  EN
+                                </button>
+                                <ul class="dropdown-menu border-0 shadow-lg" style="background-color:  rgb(218, 62, 129);">
+                                  <li><a class="dropdown-item text-white" href="#"><button class="border-0 btn-sm w-100 rounded-3 fw-bold bg-white">English</button></a></li>
+                                  <li><a class="dropdown-item text-white" href="#"><button class="border-0 btn-sm w-100 rounded-3 fw-bold bg-white">Khmer</button></a></li>
+                                </ul>
+                              </div>
+                        </div>  
+                        
+
+                        
+                        <!-- icon bag  -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart3 m-1" viewBox="0 0 16 16">
+                          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                      </svg>
+                               
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<br><br><br>
+
+
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-md modal-lg">
+            <div class="modal-content border-0 shadow-sm mx-auto" style="max-width: 400px;">
+                <!-- Header -->
+                <div class="p-4 border-bottom-0">
+                    <h5 class="mb-2">Welcome to <img src="src/Logo Panda.png" class="img-fluid" width="140px" alt="">!</h5>
+                    <p class="lead fs-6 mb-0 mt-3">Sign up or log in to continue</p>
+                    <button type="button" class="btn-close btn-md position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+                </div>
+    
+                <!-- Social Login Buttons -->
+                <div class="px-4">
+                    <div class="d-grid gap-3">
+                        <button class="btn btn-primary border-0 btn-sm shadow-sm d-flex align-items-center justify-content-center">
+                            <img src="src/facebook.png" width="30" alt="Facebook" class="me-1">
+                            <a href="https://www.facebook.com/" class=" text-white" target="_blank">
+                                <span class="fw-bold">Continue With Facebook</span>
+                            </a>
+                        </button>
+    
+                        <button class="btn btn-light btn-sm border-0 shadow-sm d-flex align-items-center justify-content-center">
+                            <img src="src/google1.png" width="30" alt="Google" class="me-1">
+                            <a href="https://mail.google.com/mail/u/0/" class=" text-dark" target="_blank">
+                                <span class="fw-bold">Continue With Google</span>
+                            </a>
+                        </button>
+    
+                        <button class="btn btn-dark btn-sm d-flex align-items-center justify-content-center">
+                            <img src="src/apple.png" width="30" alt="Apple" class="me-1">
+                            <a href="https://www.apple.com/" class=" text-white" target="_blank">
+                                <span class="fw-bold">Continue With Apple</span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+    
+                <!-- Divider -->
+                <div class="text-center my-3">
+                    <p class="lead mb-0">or</p>
+                </div>
+    
+                <!-- Login/Signup Buttons -->
+                <div class="px-4 pb-4">
+                    <div class="d-grid gap-3">
+                        <button class="btn py-2 fs-6 btn-md fw-medium rounded-3" 
+                                style="background-color: #ff2b85; color: white;" 
+                                data-bs-toggle="modal" data-bs-target="#emailModal">
+                            Log in
+                        </button>
+    
+                        <butnone;n class="btn btn-outline-dark py-2  btn-md fs-6 fw-medium rounded-3" 
+                                data-bs-toggle="modal" data-bs-target="#emailModal">
+                            SignUp
+                        </butnone;n>
+                    </div>
+    
+                    <p class="mt-3 mb-0 small">
+                        By using up, you agree to our 
+                        <span class="fw-medium" style="color: #ff2b85;">Terms and conditions</span> and 
+                        <span class="fw-medium" style="color: #ff2b85;">Privacy Policy.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- modal-login-and-sigup-end -->
+<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-3 border-0 shadow-sm rounded-4">
+            <!-- Header with back and close buttons -->
+            <div class="d-flex justify-content-between mb-4">
+                <button type="button" class="btn btn-link text-dark  ">
+                    <img src="src/Logo Panda.png" class="img-fluid" width="150px" alt="">
+                </button>
+                <button type="button" class="btn btn-link text-dark  p-0" data-bs-dismiss="modal">
+                    
+                </button>
+            </div>
+            
+            <div class="modal-body text-center px-2">
+                <!-- Email icon in circle -->
+                <div class="bg-light rounded-circle mx-auto mb-4 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                    </svg>
+                </div>
+                
+                <!-- Text content -->
+                <h4 class="mb-3 fw-normal">What's your email?</h4>
+                <p class="text-secondary mb-4">We'll check if you have an account</p>
+                
+                <!-- Form with floating label -->
+                <form id="emailForm" novalidate>
+                    <div class="form-floating mb-4">
+                        <input 
+                            type="email" 
+                            class="form-control form-control-lg border-secondary-subtle rounded-3" 
+                            id="emailInput"
+                            placeholder="name@example.com"
+                            required
+                        >
+                        <label for="emailInput">Email address</label>
+                    </div>
+                    <button 
+                        type="submit" 
+                        class="btn btn-secondary w-100 rounded-3 py-2 text-white btn-sm border-0 fw-medium" 
+                        id="continueButton"
+                        disabled
+                        style="background-color: #E4006D;"
+                    >Continue</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Main Container with Background -->
+<div class="bg-white py-4 py-lg-5">
+<div class="container px-3 px-lg-5" >
+    <!-- Carousel Wrapper -->
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-lg-10 col-xl-12">
+            <div id="carouselExample" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel">
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button"  data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+                </div>
+
+                <!-- Carousel Items -->
+                <div class="carousel-inner">
+                    <!-- First Slide -->
+                    <div class="carousel-item active">
+                        <div class="carousel-height">
+                            <img src="src/slide-main.png" 
+                                 class="w-100 h-100 object-fit-cover" 
+                                 alt="First slide">
+                        </div>
+                        
+                    </div>
+
+                    <!-- Second Slide -->
+                    <div class="carousel-item">
+                        <div class="carousel-height">
+                            <img src="src/slide-main.png" 
+                                 class="w-100 h-100 object-fit-cover" 
+                                 alt="Second slide">
+                        </div>
+                        
+                    </div>
+
+                    <!-- Third Slide -->
+                    
+                </div>
+
+                <!-- Carousel Controls -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<section class="hero-section py-3 py-md-5 py-sm-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-6">
+                <div class="cta-box bg-white text-dark p-4 p-md-5 rounded-4 shadow-sm mb-4 mb-md-5">
+                    <h6 class="mb-3 mb-md-4 fs-4 fs-md-3">List your restaurant or shop on foodpanda</h6>
+                    <p class="mb-3">Would you like millions of new customers to enjoy your amazing food and groceries? So would we!</p>
+                    <p class="mb-3">It's simple: we list your menu and product lists online, help you process orders, pick them up, and deliver them to hungry pandas - in a heartbeat!</p>
+                    <p class="mb-4">Interested? Let's start our partnership today!</p>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-md border-0 w-50">Get start</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><br>
+
+
+
+<div class="container mt-4">
+<div class="row g-4">
+    <!-- Card 1 -->
+    <h6 class="mt-5">Find us in these cities and  many more!</h6>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="src/phnom penh.jpg" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Phnom Penh</a></div>
+        </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="Provinces/Takeo.jpg" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Takeo</a></div>
+        </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="Provinces/siam reab.jpg" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Siem Reap</a></div>
+        </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="Provinces/Battambang.jpg" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Battambang</a></div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="Provinces/Kampong-Cham.jpg" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Kampong Cham</a></div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="Provinces/Kampong-Chnang.jpg" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Kampong Chnang</a></div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="Provinces/Kampong-Speu.jpg" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Kampong Speu</a></div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="Provinces/Kampong-Thom.png" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Kampong Thom</a></div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="Provinces/Kampot.jpg" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Kampot</a></div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="Provinces/Poipet.jpg" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Poipet</a></div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="Provinces/Pursat-Province.png" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Pursat</a></div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="Provinces/si.jpg" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Sihanoukville</a></div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="Provinces/takmao.jpg" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Takhmao</a></div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="custom-card">
+            <img src="Provinces/svay rieng.jpg" class="provinces" alt="pp">
+            <div class="label position-absolute bg-white rounded-4 fw-bold" style="bottom: 10px; left:10px; padding: 5px 10px;"><a href="ProvincesFD/" class="fw-light text-dark">Svay Rieng</a> </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<div class="container mt-4">
+<div class="text-bar mb-1">
+    <h6 class="fw-bold fs-5">Put Us In your Pocket</h6>
+</div>
+<div class="download-section row align-items-center">
+    <!-- Left Content -->
+    <div class="col-lg-6 text-lg-start text-center">
+        <p class="fs-5 fw-bold mt-2">Download the food and groceries you love</p>
+        <div class="d-flex align-items-center justify-content-lg-start justify-content-center ">
+            <img src="StoreApp/scan.png" alt="QR Code" class="qr-code">
+            <p class="mt-3 mx-4 ">
+                It's all at your fingertips – the restaurants and shops you love. Find the right food and groceries 
+                to suit your mood, and make the first bite last. Go ahead, download us.
+            </p>
+        </div>
+        <div class="app-buttons d-flex justify-content-lg-start justify-content-center mt-2">
+            <img src="StoreApp/add.png" alt="App Store">
+            <img src="StoreApp//add.png" alt="Google Play">
+            <img src="StoreApp//add.png" alt="Google Play">
+
+        </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="col-lg-6 text-center mt-1 mt-lg-0">
+        <img src="src/home-foodpanda-apps.png" width="70%" alt="Mobile App">
+    </div>
+</div>
+
+    <!-- Right Image -->
+    
+</div>
+
+
+
+<div class="container my-3 ">
+<div class="row">
+    <div class="col col-md-8 offset-md-2">
+        <h6 class="mb-3">Why order food on foodpanda?</h6>
+        <ul class="lead fs-6">
+            <li class="">Selection of premium restaurants, featuring diverse cuisines.</li>
+            <li class="">High-quality delivery service.</li>
+            <li class="">Live chat feature to give you instant help when you need it.</li>
+        </ul>
+
+        <h6 class="mt-4">How can I order from foodpanda?</h6>
+        <p class="lead fs-6">To order foodpanda, you simply need to find the restaurants or shops that deliver to your location. Add your address, browse through the available restaurants or shops, choose your order and proceed to checkout for payment. Your order will be delivered in no time!</p>
+
+        <h6 class="mt-4">Choose from dozens of cuisines and order online for home delivery</h6>
+        <p class="lead fs-6">At foodpanda Cambodia, we make sure you have the best food delivery experience. Offering food ranging from steaks, sushi, fried chicken, Laab, fried noodles, or even donuts, foodpanda has got you covered.</p>
+
+        <h6>Steps to Order:</h6>
+        <ol class="">
+            <li class=""><strong>Find a restaurant:</strong> <span class="lead fs-6"> Enter your address on the homepage. Browse the extensive list of restaurants that deliver to your area. </span></li>
+            <li class=""><strong>Choose your dishes:</strong> <span class="lead fs-6"> Browse the menu and select dishes you would like to order.</span></li>
+            <li class=""><strong>Checkout & Payment:</strong> <span class="lead fs-6"> Click "ORDER NOW" and enter your delivery address. Follow the checkout instructions.</span></li>
+            <li class=""><strong>Delivery:</strong> <span class="lead fs-6"> Receive an email and SMS confirming your order and delivery time.</span></li>
+        </ol>
+
+        <h6 class="mt-4">Does foodpanda deliver 24 hours?</h6>
+        <p class="lead fs-6">No, foodpanda in Cambodia delivers from 6 am to 12 am midnight. Availability may vary depending on the restaurant or shop.</p>
+
+        <h6 class="mt-4">What restaurants and shops let you order online?</h6>
+        <p class="lead fs-6">There are hundreds of businesses on foodpanda Cambodia including KFC, Texas Chicken, The Pizza Company, Dairy Queen, Bonchon Chicken, and many more.</p>
+
+        <h6 class="mt-4">What is the difference between delivery and Pick-Up?</h6>
+        <p class="lead fs-6">If you choose delivery, foodpanda will deliver to your address. For Pick-Up, you self-collect your order from the restaurant.</p>
+
+        <h6 class="mt-4">Is there a minimum amount I need to spend to order foodpanda?</h6>
+        <p class="lead fs-6">Yes. If your order is less than the minimum order value, you can pay the difference.</p>
+    </div>
+</div>
+</div>
+
+
+
+<div class="container">
+<hr style="color: #000000;">
+</div>
+
+<div class="container py-3">
+<h5 class="mb-3 fw-bold text-center">Popular vendors</h5>
+<div class="row g-2  fs-6 d-flex align-items-center justify-content-sm-center">
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link ">The Pizza Company</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link ">KFC</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Dairy Queen</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Burger King</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Bayon Bakery</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Starbucks</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Big Apple Donuts & Coffee</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">KOI Thé</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Lotteria</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Kamu Tea</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Bonchon</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Tous Les Jours</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Krispy Kreme</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Auntie Anne's</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Chacha San Chen</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Yellow Cab Pizza</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Coffee Today</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Little Sheep Hot Pot</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">An Cha</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Backyard Café Phnom Penh</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">ACB Fried Chicken</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link khmer">វិមានផ្កាយទី៥</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link khmer">ហាងបាយផេងអ៊ី</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link khmer">ផ្ទះបាយលោកម៉េក</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link khmer">ហាងចំណីអន្លង់វិល (FlyaWin)</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Go Go Seoul</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link khmer">ម៉ាជូនីញូវម្អូបខ្មែរ</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">The Alley</a></div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2"><a href="#" class="vendor-link">Num Pang Jruk</a></div>
+</div>
+</div>
+<div class="container">
+<hr>
+</div>
+
+<div class="container py-4 ">
+<h5 class="mb-4 text-center fw-bold ">Popular cuisines available for delivery in Phnom Penh so far</h5>
+<div class="row">
+    <div class="col-6 col-md-3 mb-4">
+        <h6 class="category-title text-center fw-bold">American</h6>
+        <div class="d-flex flex-column gap-2 d-flex align-items-center">
+            <a href="#" class="cuisine-link">Cakes</a>
+            <a href="#" class="cuisine-link">Fast Food</a>
+            <a href="#" class="cuisine-link">German</a>
+            <a href="#" class="cuisine-link">Indian</a>
+            <a href="#" class="cuisine-link">Korean</a>
+            <a href="#" class="cuisine-link">Mediterranean</a>
+            <a href="#" class="cuisine-link">Sandwich</a>
+            <a href="#" class="cuisine-link">Spanish</a>
+            <a href="#" class="cuisine-link">Vegetarian</a>
+        </div>
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+        <h6 class="category-title text-center fw-bold">Asian</h6>
+        <div class="d-flex flex-column gap-2 d-flex align-items-center">
+            <a href="#" class="cuisine-link">Chinese</a>
+            <a href="#" class="cuisine-link">Filipino</a>
+            <a href="#" class="cuisine-link">Greek</a>
+            <a href="#" class="cuisine-link">Indonesian</a>
+            <a href="#" class="cuisine-link">Latino</a>
+            <a href="#" class="cuisine-link">Mexican</a>
+            <a href="#" class="cuisine-link">Seafood</a>
+            <a href="#" class="cuisine-link">Sushi</a>
+            <a href="#" class="cuisine-link">Vietnamese</a>
+        </div>
+    </div>
+    <div class="col-6 col-md-3 mb-4 ">
+        <h6 class="category-title text-center fw-bold">Beverages</h6>
+        <div class="d-flex flex-column gap-2 d-flex align-items-center">
+            <a href="#" class="cuisine-link">Desserts</a>
+            <a href="#" class="cuisine-link">French</a>
+            <a href="#" class="cuisine-link">Halal</a>
+            <a href="#" class="cuisine-link">Italian</a>
+            <a href="#" class="cuisine-link">Lebanese</a>
+            <a href="#" class="cuisine-link">Middle Eastern</a>
+            <a href="#" class="cuisine-link">Singaporean</a>
+            <a href="#" class="cuisine-link">Thai</a>
+            <a href="#" class="cuisine-link">Western</a>
+        </div>
+    </div>
+    <div class="col-6 col-md-3 mb-4">
+        <h6 class="category-title text-center fw-bold">Burger</h6>
+        <div class="d-flex flex-column gap-2  d-flex align-items-center">
+            <a href="#" class="cuisine-link">European</a>
+            <a href="#" class="cuisine-link">Fusion</a>
+            <a href="#" class="cuisine-link">Healthy Food</a>
+            <a href="#" class="cuisine-link">Japanese</a>
+            <a href="#" class="cuisine-link">Malaysian</a>
+            <a href="#" class="cuisine-link">Pizza</a>
+            <a href="#" class="cuisine-link">South East Asian</a>
+            <a href="#" class="cuisine-link">Turkish</a>
+            <a href="#" class="cuisine-link">Bubble tea</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container">
+<hr >
+</div>
+
+
+<div class="container py-4 text-center">
+<h6 class="mb-4 fw-bold">foodpanda Cambodia available in these cities</h6>
+
+<!-- Cities -->
+<div class="row mb-4 text-center fw-bold d-flex justify-content-center align-items-center">
+    <div class="col-6 col-sm-3 mb-2">
+        <a href="ProvincesFD/index.html" class="location-link">Phnom Penh</a>
+    </div>
+    <div class="col-6 col-sm-3 mb-2">
+        <a href="ProvincesFD/index.html" class="location-link">Siem Reap</a>
+    </div>
+    <div class="col-6 col-sm-3 mb-2">
+        <a href="ProvincesFD/index.html" class="location-link">Battambang</a>
+    </div>
+    <div class="col-6 col-sm-3 mb-2">
+        <a href="ProvincesFD/index.html" class="location-link">Ta Khmau</a>
+    </div>
+    <div class="col-6 col-sm-3 mb-2">
+        <a href="ProvincesFD/index.html" class="location-link">Kampong Cham</a>
+    </div>
+    <div class="col-6 col-sm-3 mb-2">
+        <a href="ProvincesFD/index.html" class="location-link">Kampot</a>
+    </div>
+</div>
+
+<hr>
+<!-- Countries -->
+<div class="d-flex flex-wrap gap-2 align-items-center justify-content-center">
+    <a href="#" class="location-link text-center">Myanmar</a>
+    <span class="separator">|</span>
+    <a href="#" class="location-link">Laos</a>
+    <span class="separator">|</span>
+    <a href="#" class="location-link">Thailand</a>
+    <span class="separator">|</span>
+    <a href="#" class="location-link">Singapore</a>
+    <span class="separator">|</span>
+    <a href="#" class="location-link">Malaysia</a>
+    <span class="separator">|</span>
+    <a href="#" class="location-link">Philippines</a>
+    <span class="separator">|</span>
+    <a href="#" class="location-link">Taiwan</a>
+    <span class="separator">|</span>
+    <a href="#" class="location-link">Hong Kong</a>
+    <span class="separator">|</span>
+    <a href="#" class="location-link">Pakistan</a>
+    <span class="separator">|</span>
+    <a href="#" class="location-link">Bangladesh</a>
+</div>
+<hr>
+</div>
+
+
+
+<div class="container">
+    <div class="row flex-column flex-md-row">
+        <!-- Logos Section -->
+        <div class="col-md-8 d-flex justify-content-center justify-content-md-start mb-4 mb-md-0">
+            <div class="d-flex align-items-center gap-3">
+                <!-- Foodpanda Logo -->
+                <img src="src/Logo Panda.png" style=" color:#666;" class="img-fluid" width="120px" alt="Foodpanda" class="footer-logo">
+                
+                <!-- Divider -->
+                <div class="divider d-none d-sm-block" style="width: 1px; height: 40px; background-color: #babdc0;"></div>
+                
+                <!-- Delivery Hero Logo -->
+                <img src="src/delivery-hero.png" style=" color:#666;" class="img-fluid" width="80px" alt="Delivery Hero" class="footer-logo">
+            </div>
+        </div>
+        <!-- Social Media Icons -->
+        <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
+            <div class="d-flex align-items-center gap-3">
+                <!-- Instagram Icon -->
+                <a href="#" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" style="width: 24px; height:24px; color:#e21b70"  viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                    </svg>
+                </a>
+                
+                <!-- Facebook Icon -->
+                <a href="#" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" style="width: 24px; height:24px; color:#e21b70" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg>
+                </a>
+
+                <!-- Telegram Icon -->
+                <a href="#" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" style="width: 24px; height:24px; color:#e21b70" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                    </svg>
+                </a>
+
+                <!-- TikTok Icon -->
+                <a href="#" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="social-icon" style="width: 24px; height:24px; color:#e21b70" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="bg-light text-center py-2 mt-4">
+<small>&copy; Lorndavit12@gamil.com</small><br>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
